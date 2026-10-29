@@ -197,7 +197,7 @@ def run_server():
     database_path = os.environ.get("LIBRARY_DB", str(DEFAULT_DB))
     initialize(database_path)
     config = AppConfig(database_path, api_key, jwt_secret)
-    host = os.environ.get("LIBRARY_HOST", "127.0.0.1")
+    host = os.environ.get("LIBRARY_HOST", "0.0.0.0")
     server = ThreadingHTTPServer((host, int(os.environ.get("PORT", "8000"))), make_handler(config))
     certificate = os.environ.get("TLS_CERT_FILE")
     private_key = os.environ.get("TLS_KEY_FILE")
