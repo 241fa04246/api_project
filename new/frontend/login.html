@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in — Reading Room</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body class="auth-page">
+  <header class="site-header"><a class="brand" href="/">Reading Room<span class="brand-mark">.</span></a><nav><a href="/register.html">Create an account</a></nav></header>
+  <main class="auth-layout">
+    <section class="auth-aside"><p class="eyebrow">WELCOME BACK</p><h1>Your reading<br>journey awaits.</h1><p>Sign in to browse the catalog and manage your loans.</p></section>
+    <section class="auth-card">
+      <p class="eyebrow">MEMBER ACCESS</p><h2>Sign in</h2>
+      <form data-form="login">
+        <label for="api-key">Library API key</label><input id="api-key" name="api_key" type="password" autocomplete="off" required minlength="5">
+        <p class="field-help">For this local demo, use the key configured when you started the server.</p>
+        <label for="username">Username</label><input id="username" name="username" required minlength="3" maxlength="32" autocomplete="username">
+        <label for="password">Password</label><input id="password" name="password" type="password" required minlength="10" maxlength="128" autocomplete="current-password">
+        <p class="form-message" role="status" aria-live="polite"></p>
+        <button class="button button-full" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch">New to the library? <a href="/register.html">Create an account</a></p>
+    </section>
+  </main>
+</body>
+</html>

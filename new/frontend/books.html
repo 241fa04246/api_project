@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book catalog — Reading Room</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body data-page="books">
+  <header class="site-header"><a class="brand" href="/">Reading Room<span class="brand-mark">.</span></a><nav><a href="/dashboard.html">My library</a><button class="link-button" data-action="logout">Sign out</button></nav></header>
+  <main class="page-shell">
+    <p class="eyebrow">THE COLLECTION</p><h1 class="page-title">Find a good book.</h1>
+    <p class="lede compact">Search the shelves by title or author.</p>
+    <form class="search-bar" data-form="search"><label class="sr-only" for="book-search">Search books</label><input id="book-search" name="q" placeholder="Try a title or author's name"><button class="button" type="submit">Search</button></form>
+    <section class="admin-panel" data-admin-panel hidden>
+      <div><p class="eyebrow">LIBRARIAN DESK</p><h2>Add a book</h2></div>
+      <form class="book-form" data-form="create-book">
+        <label>Title<input name="title" required maxlength="200"></label><label>Author<input name="author" required maxlength="200"></label>
+        <label>ISBN<input name="isbn" required maxlength="200"></label><label>Year<input name="year" type="number" min="0" max="2100" required></label>
+        <label>Copies<input name="copies" type="number" min="0" max="100000" required></label>
+        <button class="button" type="submit">Add to catalog</button>
+      </form>
+    </section>
+    <p class="form-message" data-page-message role="status" aria-live="polite"></p>
+    <section class="catalog-list" data-books aria-live="polite"><p class="empty-state">Loading the catalog…</p></section>
+  </main>
+</body>
+</html>

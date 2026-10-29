@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the library — Reading Room</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body class="auth-page">
+  <header class="site-header"><a class="brand" href="/">Reading Room<span class="brand-mark">.</span></a><nav><a href="/login.html">Sign in</a></nav></header>
+  <main class="auth-layout">
+    <section class="auth-aside"><p class="eyebrow">A PLACE FOR EVERY READER</p><h1>Make yourself<br>at home.</h1><p>Create a member account to borrow available books and keep track of what you are reading.</p></section>
+    <section class="auth-card">
+      <p class="eyebrow">MEMBERSHIP</p><h2>Join the library</h2>
+      <form data-form="register">
+        <label for="api-key">Library API key</label><input id="api-key" name="api_key" type="password" autocomplete="off" required minlength="16">
+        <p class="field-help">For this local demo, use the key configured when you started the server.</p>
+        <label for="username">Username</label><input id="username" name="username" required minlength="3" maxlength="32" pattern="[A-Za-z0-9_.-]+" autocomplete="username">
+        <label for="password">Password</label><input id="password" name="password" type="password" required minlength="10" maxlength="128" autocomplete="new-password">
+        <p class="field-help">Use 4–128 characters. Your password is stored as a salted hash.</p>
+        <p class="form-message" role="status" aria-live="polite"></p>
+        <button class="button button-full" type="submit">Create account <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch">Already a member? <a href="/login.html">Sign in</a></p>
+    </section>
+  </main>
+</body>
+</html>
